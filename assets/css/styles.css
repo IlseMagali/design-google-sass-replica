@@ -1,41 +1,135 @@
-/*
-Error: Invalid CSS after "@for $": expected identifier, was ""
-        on line 41 of src/scss/styles.scss
+/* Variables */
+/*Global*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
-36: 	.col-#{$numColumn}{
-37: 		width:anchoColumnas($numColumn);
-38: 	}
-39: }
-40: 
-41: @for $
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto; }
 
-Backtrace:
-src/scss/styles.scss:41
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1207:in `expected'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1137:in `expected'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1132:in `tok!'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:277:in `for_directive'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:222:in `special_directive'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:197:in `directive'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:684:in `block_child'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:677:in `block_contents'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:125:in `stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:41:in `parse'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:406:in `_to_tree'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.24/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"@for $\": expected identifier, was \"\"\A         on line 41 of src/scss/styles.scss\A \A 36: 	.col-#{$numColumn}{\A 37: 		width:anchoColumnas($numColumn);\A 38: 	}\A 39: }\A 40: \A 41: @for $"; }
+.row:before, .row:after {
+  content: " ";
+  display: table; }
+.row:after {
+  clear: both; }
+
+[class*="col-"] {
+  min-height: 7px;
+  padding: 12px;
+  float: left; }
+
+/* funciones*/
+.col-1 {
+  width: 8.33333%; }
+
+.col-2 {
+  width: 16.66667%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33333%; }
+
+.col-5 {
+  width: 41.66667%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33333%; }
+
+.col-8 {
+  width: 66.66667%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33333%; }
+
+.col-11 {
+  width: 91.66667%; }
+
+.col-12 {
+  width: 100%; }
+
+.col-1-offset {
+  margin-left: 8.33333%; }
+
+.col-2-offset {
+  margin-left: 16.66667%; }
+
+.col-3-offset {
+  margin-left: 25%; }
+
+.col-4-offset {
+  margin-left: 33.33333%; }
+
+.col-5-offset {
+  margin-left: 41.66667%; }
+
+.col-6-offset {
+  margin-left: 50%; }
+
+.col-7-offset {
+  margin-left: 58.33333%; }
+
+.col-8-offset {
+  margin-left: 66.66667%; }
+
+.col-9-offset {
+  margin-left: 75%; }
+
+.col-10-offset {
+  margin-left: 83.33333%; }
+
+.col-11-offset {
+  margin-left: 91.66667%; }
+
+.col-12-offset {
+  margin-left: 100%; }
+
+.horizontal-align {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+  margin-top: 5%; }
+
+.list-decoration {
+  list-style: none;
+  color: #424242;
+  font-family: Arial;
+  font-size: 10px; }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.heading {
+  padding-top: 10px;
+  font-family: Arial;
+  font-size: 30px;
+  color: #424242; }
+
+h4 {
+  color: #424242;
+  font-family: Arial; }
+
+.border {
+  background-color: gray;
+  border: solid 1px black; }
+
+.img {
+  width: 100%; }
+
+hr {
+  width: 100%;
+  border: 2px solid #4285f4; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,10 @@
+/* Variables */
+$color-title:#424242;
+$color-date:#5f6368;
+$color-text:#414549;
+$color-line-divider-blue:#4285f4;
+$font-face:Arial;
+
 /*Global*/
 * {
 	box-sizing: border-box;
@@ -27,7 +34,7 @@
 	padding:12px;
 	float:left;
 }
-
+/* funciones*/
 @function anchoColumnas($columns){
 	@return percentage(($columns/12));
 }
@@ -38,4 +45,53 @@
 	}
 }
 
-@for $
+@for $numColumn from 1 through 12 {
+	.col-#{$numColumn}-offset{
+		margin-left:anchoColumnas($numColumn);
+	}
+}
+
+.horizontal-align {
+	display:flex;
+	justify-content: space-between;
+	margin-bottom: 5%;
+	margin-top: 5%;
+}
+
+.list-decoration {
+	list-style: none;
+	color:$color-title;
+	font-family: $font-face;
+	font-size:10px;
+}
+
+.center {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.heading {
+	padding-top:10px;
+	font-family: $font-face;
+	font-size: 30px;
+	color:$color-title;
+}
+
+h4 {
+	color:$color-title;
+	font-family: $font-face;
+}
+
+.border {
+	background-color: gray;
+	border:solid 1px black;
+}
+.img {
+	width: 100%;
+}
+
+hr {
+	width: 100%;
+	border:2px solid $color-line-divider-blue;
+}
