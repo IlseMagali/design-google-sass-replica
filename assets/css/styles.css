@@ -117,7 +117,7 @@
   font-size: 30px;
   color: #424242; }
 
-h4 {
+h2 {
   color: #424242;
   font-family: Arial; }
 
@@ -131,5 +131,14 @@ h4 {
 hr {
   width: 100%;
   border: 2px solid #4285f4; }
+
+a img {
+  width: 8.33%; }
+
+.img-face {
+  width: 1em; }
+
+ul li {
+  list-style: none; }
 
 /*# sourceMappingURL=styles.css.map */
